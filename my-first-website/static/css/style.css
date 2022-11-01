@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(rgb(0,0,0,0.3),transparent), url(../image/backgroup\ line.jpg);
+    /* background-size: cover; */
+    background-position: center;
+     padding: 0 8%;
+    position: relative;
+}
+nav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+.logo{
+   width: 120px;
+     cursor: pointer;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+    padding-right: 30px;
+}
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translate(-50%);
+    background: #fff;
+    transition: width 0.3s;
+}
+nav ul li a:hover::after{
+    width: 50%;
+}
+.text-book{
+    color: #fff;
+    position: absolute;
+}
+
+.text-book h1{
+    font-size: 19px;
+    line-height: 90px;
+    /* margin-left: -10px; */
+}
+.text-book h2{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.text-book p{
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 90px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url(../image/ttib.jpeg);
+   -webkit-background-clip:text ;
+    background-position:0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{background-position:2000px 0;
+    }
+}  
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.text-book a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 20px;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+}
+.text-book a span{
+    font-size: 30px;
+    line-height: 15px;
+    margin-left: 5px;
+    color: red;
+}
+.header{
+    width: 100%;
+    height: 90vh;
+    background-image: url(../image/eyes-code.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation-name: header-;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes header-{
+    0%{
+       background-image: url(../image/heart1.jpg);
+    }
+    20%{
+        background-image: url(../image/world\ 3.jpg);
+    }
+    100%{
+        background-image:url(../image/eyes-code.jpg);
+    }
+}
+.social-icon{
+  position: absolute;
+   right: 5%; 
+   bottom: 8%;
+}
+.social-icon a {
+    width: 25px;
+     margin: 25px 25px; 
+    color: black;
+}
